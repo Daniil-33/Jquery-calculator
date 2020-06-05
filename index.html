@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hyndai</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<main class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="head">
+					<h1>New ELANTRA</h1>
+				</div>
+			</div>
+		</div>
+		<!--Вывод машины выбранного цвета-->
+		<div class="row">
+			<div class="col-12 col-sm-7 col-md-7 col-lg-7">
+				<div class="imgHolder" id="imgHolder">
+					<img src="cars/black.png" alt="car">
+				</div>
+			</div>
+			<!--Табло вывода комплектации и цены в грн и дол.-->
+			<div class="col-12 col-sm-5 col-md-5 col-lg-5">
+				<div class="model-summary">
+					<div class="model-name">Hyndai Elantra</div>
+					<div class="model-specs" id="modelSpecs">1.6 - 6AT Comfort</div>
+					<div class="model-price" id="modelPrice"></div>
+					<div class="model-price" id="modelPriceUSD"></div>
+					<button class="button-get">Заказaть</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">	
+			<div class="col-12">
+				<!--Форма с радиоформами для формирования комплектации-->
+				<form id="autoForm" class="autoForm">
+					<div class="col-12">
+						<h2>Выбери комплектацию для себя</h2>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+								<h4>Двигатель</h4>
+
+								<div class="form-block">
+									<input type="radio" name="engine" id="engine1400" value="624900" checked>
+									<label for="engine1400">1.4 л (100 л. с.)</label>
+								</div>
+								<div class="form-block">
+									<input type="radio" name="engine" id="engine1600" value="749900">
+									<label for="engine1400">1.6 л (123 л. с.)</label>
+								</div>
+							</div>
+							<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+								<h4>Трансмисссия</h4>
+								<div class="form-block">
+									<input type="radio" name="transmission" id="transmission6MT" value="0" checked>
+									<label for="engine1400">Ручная, 6 ступеней (6МТ)</label>
+								</div>
+								<div class="form-block">
+									<input type="radio" name="transmission" id="transmission6AT" value="125000">
+									<label for="engine1400">Автомат, 6 ступеней (6АТ)</label>
+								</div>
+							</div>
+							<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+								<h4>Пакеты  опций</h4>
+								<div class="form-block">
+									<input type="radio" name="package" id="packageActive" value="0" checked>
+									<label for="engine1400">Active</label>
+								</div>
+								<div class="form-block">
+									<input type="radio" name="package" id="packageActivePlus" value="85000">
+									<label for="engine1400">Active plus</label>
+								</div>
+							</div>
+							<!--Выбор цвета-->
+							<div class="col-12">
+								<h4>Цвет</h4>
+								<div class="colorSelect">
+									<div class="colorItem black" data-img-path="cars/black.png"></div>
+									<div class="colorItem red" data-img-path="cars/red.png"></div>
+									<div class="colorItem blue" data-img-path="cars/blue.png"></div>
+									<div class="colorItem brown" data-img-path="cars/brown.png"></div>
+									<div class="colorItem grey" data-img-path="cars/grey.png"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
